@@ -10,21 +10,21 @@
 Pod::Spec.new do |s|
   s.name             = "FFGlobalAlertController"
   s.version          = "0.1.0"
-  s.summary          = "A short description of FFGlobalAlertController."
+  s.summary          = "FFGlobalAlertController is a Category on UIAlertController that provides global show method in a second UIWindow."
   s.description      = <<-DESC
                        An optional longer description of FFGlobalAlertController
 
                        * Markdown format.
                        * Don't worry about the indent, we strip it!
                        DESC
-  s.homepage         = "https://github.com/<GITHUB_USERNAME>/FFGlobalAlertController"
+  s.homepage         = "https://github.com/agilityvision/FFGlobalAlertController"
   # s.screenshots     = "www.example.com/screenshots_1", "www.example.com/screenshots_2"
   s.license          = 'MIT'
-  s.author           = { "Eric Larson" => "elarson@foreflight.com" }
-  s.source           = { :git => "https://github.com/<GITHUB_USERNAME>/FFGlobalAlertController.git", :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
+  s.author           = { "Eric Larson" => "eric@agilityvision.com" }
+  s.source           = { :git => "https://github.com/agilityvision/FFGlobalAlertController.git", :tag => s.version.to_s }
+  s.social_media_url = 'https://twitter.com/agilityvision'
 
-  s.platform     = :ios, '7.0'
+  s.platform     = :ios, '8.0'
   s.requires_arc = true
 
   s.source_files = 'Pod/Classes/**/*'

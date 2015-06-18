@@ -16,7 +16,41 @@
                     <view key="view" contentMode="scaleToFill" id="TpU-gO-2f1">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Global UIAlertController Demo" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qy0-iQ-vlf">
+                                <rect key="frame" x="184" y="30" width="233" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gzK-eb-wrm">
+                                <rect key="frame" x="263" y="68" width="75" height="30"/>
+                                <state key="normal" title="Show Alert">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="showAlert:" destination="whP-gf-Uak" eventType="touchUpInside" id="1xu-5D-q7v"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iRO-wF-azf">
+                                <rect key="frame" x="214" y="106" width="173" height="30"/>
+                                <state key="normal" title="Show Alert with TextField">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="showAlertField:" destination="whP-gf-Uak" eventType="touchUpInside" id="Iqh-Dy-dEH"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="qy0-iQ-vlf" secondAttribute="centerX" id="Afh-eJ-cdY"/>
+                            <constraint firstAttribute="centerX" secondItem="gzK-eb-wrm" secondAttribute="centerX" id="Vka-FA-lKO"/>
+                            <constraint firstItem="qy0-iQ-vlf" firstAttribute="top" secondItem="uEw-UM-LJ8" secondAttribute="bottom" constant="10" id="d1H-wj-YiY"/>
+                            <constraint firstAttribute="centerX" secondItem="iRO-wF-azf" secondAttribute="centerX" id="dWJ-V6-Nwv"/>
+                            <constraint firstItem="iRO-wF-azf" firstAttribute="top" secondItem="gzK-eb-wrm" secondAttribute="bottom" constant="8" id="iyd-cK-olW"/>
+                            <constraint firstItem="gzK-eb-wrm" firstAttribute="top" secondItem="qy0-iQ-vlf" secondAttribute="bottom" constant="17" id="zup-cE-58c"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tc2-Qw-aMS" userLabel="First Responder" sceneMemberID="firstResponder"/>

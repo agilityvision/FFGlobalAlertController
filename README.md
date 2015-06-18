@@ -22,7 +22,7 @@ pod "FFGlobalAlertController"
 
 ## Author
 
-Eric Larson, elarson@foreflight.com
+Eric Larson, eric@agilityvision.com
 
 ## License
 
