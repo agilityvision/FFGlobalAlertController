@@ -44,7 +44,9 @@
 // would not disappear after the Alert was dismissed
     __block UITextField *localTextField;
     UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Global Alert" message:@"Enter some text" preferredStyle:UIAlertControllerStyleAlert];
-    [alert addAction:[UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:nil]];
+    [alert addAction:[UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+        NSLog(@"do something with text:%@", localTextField.text);
+    }]];
     [alert addTextFieldWithConfigurationHandler:^(UITextField *textField) {
         localTextField = textField;
     }];
