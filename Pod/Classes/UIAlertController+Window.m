@@ -11,7 +11,7 @@
 
 @interface UIAlertController (Private)
 
-@property (nonatomic, strong, readonly) UIWindow *alertWindow;
+@property (nonatomic, strong) UIWindow *alertWindow;
 
 @end
 
