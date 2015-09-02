@@ -43,4 +43,12 @@
     [self.alertWindow.rootViewController presentViewController:self animated:animated completion:nil];
 }
 
+- (void)viewDidDisappear:(BOOL)animated {
+    [super viewDidDisappear:animated];
+    
+    // precaution to insure window gets destroyed
+    self.alertWindow.hidden = YES;
+    self.alertWindow = nil;
+}
+
 @end
