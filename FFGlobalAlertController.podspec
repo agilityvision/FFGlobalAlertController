@@ -9,7 +9,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "FFGlobalAlertController"
-  s.version          = "1.0.1"
+  s.version          = "1.0.2"
   s.summary          = "FFGlobalAlertController is a Category on UIAlertController that provides global show method in a second UIWindow."
   s.description      = <<-DESC
                        Provides a Show method that creates a UIWindow with a transparent UIViewController and presents the UIAlertController on it.
