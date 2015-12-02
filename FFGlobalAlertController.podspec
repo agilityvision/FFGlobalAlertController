@@ -18,7 +18,7 @@ Pod::Spec.new do |s|
   s.homepage         = "https://github.com/agilityvision/FFGlobalAlertController"
   s.license          = 'MIT'
   s.author           = { "Eric Larson" => "eric@agilityvision.com" }
-  s.source           = { :git => "https://github.com/NikolaySohryakov/FFGlobalAlertController.git", :tag => s.version.to_s }
+  s.source           = { :git => "https://github.com/agilityvision/FFGlobalAlertController.git", :tag => s.version.to_s }
   s.social_media_url = 'https://twitter.com/agilityvision'
 
   s.platform     = :ios, '8.0'
