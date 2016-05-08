@@ -12,6 +12,7 @@
 @interface UIAlertController (Private)
 
 @property (nonatomic, strong) UIWindow *alertWindow;
+@property (nonatomic, strong) UIColor *tintColor;
 
 @end
 
@@ -27,9 +28,25 @@
     return objc_getAssociatedObject(self, @selector(alertWindow));
 }
 
+@dynamic tintColor;
+
+- (void)setTintColor:(UIColor *)tintColor {
+    objc_setAssociatedObject(self, @selector(tintColor), tintColor, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+}
+
+- (UIColor *)tintColor {
+    return objc_getAssociatedObject(self, @selector(tintColor));
+}
+
 @end
 
 @implementation UIAlertController (Window)
+
++ (instancetype)alertControllerWithTitle:(NSString *)title message:(NSString *)message preferredStyle:(UIAlertControllerStyle)preferredStyle tintColor:(UIColor *)tintColor {
+    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:title message:message preferredStyle:preferredStyle];
+    alertController.tintColor = tintColor;
+    return alertController;
+}
 
 - (void)show {
     [self show:YES];
@@ -37,6 +54,7 @@
 
 - (void)show:(BOOL)animated {
     self.alertWindow = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    [self.alertWindow setTintColor:self.tintColor];
     self.alertWindow.rootViewController = [[UIViewController alloc] init];
     self.alertWindow.windowLevel = UIWindowLevelAlert + 1;
     [self.alertWindow makeKeyAndVisible];
