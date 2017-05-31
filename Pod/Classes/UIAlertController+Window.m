@@ -36,6 +36,10 @@
 }
 
 - (void)show:(BOOL)animated {
+    if (self.presentingViewController) {
+        return;
+    }
+    
     self.alertWindow = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     self.alertWindow.rootViewController = [[UIViewController alloc] init];
     self.alertWindow.windowLevel = UIWindowLevelAlert + 1;
